@@ -1,17 +1,18 @@
-#include<stdio.h>
-void main() {
-    int i=1, n;
+#include <stdio.h>
 
-    printf("Enter Numer:\n");
-    scanf("%d", &n);
-
-    while (i<=n)
-    {
-        if (i%2==0)
-        {
-            printf("%d\n", i);
-        }
-        i++;
-    }
+int main() {
+    int start, end;
     
+    printf("Enter two numbers: ");
+    scanf("%d %d", &start, &end);
+
+    printf("Numbers divisible by 2 between %d and %d are:\n", start, end);
+    for (int i = start; i <= end; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    
+    return 0;
 }
